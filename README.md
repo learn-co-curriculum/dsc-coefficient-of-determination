@@ -1,8 +1,7 @@
-
 # Coefficient of Determination
 
 ## Introduction
-For linear regression analysis, as we saw earlier, the straight line does not **fully** describe the relationship between variables and there is always some error. In general, you'll want to determine a "goodness of fit"-measure of the fitted line. In this lesson, you'll learn about the "R-Squared"($R^2$) measure, also known as the Coefficient of Determination.
+For linear regression analysis, as we saw earlier, the straight line does not **fully** describe the relationship between variables and there is always some error. In general, you'll want to determine a "goodness of fit"-measure of the fitted line. In this lesson, you'll learn about the "R-Squared"($R^2$) measure, also known as the Coefficient of Determination, which is the *proportion of explained variation*.
 
 ## Objectives
 You will be able to:
@@ -18,7 +17,7 @@ Here is how it works.
 R-Squared uses a so-called "baseline" model which is a very simple, naive model. This baseline model does not make use of any independent variables to predict the value of dependent variable Y. Instead, it uses the **mean** of the observed responses of the dependent variable $y$ and always predicts this mean as the value of $y$ for any value of $x$. In the image below, this model is given by the straight orange line.
 
 
-<img src="images/linreg_rsq.png" width="600">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/linreg_rsq.png" width="600">
 
 You can see that, in this plot, the baseline model always predicts the mean of $y$ **irrespective** of the value of the $x$. The gray line, however, is our fitted regression line which makes use of $x$ values to predict the values of $y$. Looking at the plot above, R-Squared simply asks the question:
 
@@ -48,7 +47,7 @@ For completion,
 
 Our worst possible regression model could be the baseline model itself. In that case, the RSS is equal to TSS looking at the graph above. Then your R_squared value is 0. Look at the plot below, where you notice that $\hat y$ is simply a straight line.
 
-<img src="images/rs5.png" width="500">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/rs5.png" width="500">
 
 
 Due to this particular relationship between $x$ and $y$, the regression line $\hat y$ is the same as the mean line for $\overline y$. The R-Squared for this model is 0. It's clear that a straight line is probably not the right fit for this data.
@@ -56,7 +55,7 @@ Due to this particular relationship between $x$ and $y$, the regression line $\h
 On the other extreme, the best model could also be one that fits all the data points perfectly. Because the unexplained part of the variation is 0, R-Squared is 1–0, so 1 in this case, which indicates a perfect model. Below is an example of this (know that this will rarely happen with real world data).
 
 
-<img src="images/rs6.png" width="500">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/rs6.png" width="500">
 
 > **R-Squared can take a value between 0 and 1 where values closer to 0 represent a poor fit and values closer to 1 represent an (almost) perfect fit**
 
@@ -67,4 +66,4 @@ An R-squared value of say 0.85 can be described conceptually as:
 > ***85% of the variations in dependent variable $y$ are explained by the independent variable in our model.***
 
 ## Summary 
-In this lesson, you looked at the R-Squared, or the Coefficient of Determination to evaluate the goodness of fit for a regression line. You saw how R-Squared is calculated by comparing a given model to a baseline model and learned that it must be a value between 0 and 1. In the next lab, you'll move on to calculating R-Squared in Python. 
+In this lesson, you looked at the R-Squared, or the Coefficient of Determination which is the proportion of explained variation to evaluate the goodness of fit for a regression line. You saw how R-Squared is calculated by comparing a given model to a baseline model and learned that it must be a value between 0 and 1. In the next lab, you'll move on to calculating R-Squared in Python. 
